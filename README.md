@@ -7,10 +7,17 @@ Specifically, at the time of writing this, Magento 2.0 and 2.1 require PHPUnit 4
 Installation
 ------------
 
-The typical usage of this package is as a dev requirement of a Magento 2 extension. In this case require this metapackage as follows:
+The typical usage of this package is as a dev requirement of a Magento 2 extension. In this case do not require the PHPUnit package directly in your composer.json file. Instead require this metapackage as follows:
 
 ```
-composer require --dev webgriffe/magento2-phpunit
+composer require --dev webgriffe/magento2-phpunit ^1.0
+```
+
+Notice the ^1.0 version constraint: this is important, as without this Composer would try to force the latest stable tag with a constraint such as ^1.1 and this may conflict with the Magento version you are using.
+If you had the PHPUnit package installed previously, then it's necessary to remove the PHPUnit dependency prior to installing this metapackage:
+ 
+```
+composer remove phpunit/phpunit
 ```
 
 How this works
