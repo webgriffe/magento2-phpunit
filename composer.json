@@ -1,0 +1,16 @@
+{
+    "name": "webgriffe/magento2-phpunit",
+    "description": "Metapackage that installs the correct PHPUnit version depending on the version of Magento 2",
+    "type": "metapackage",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Webgriffe s.r.l.",
+            "email": "support@webgriffe.com"
+        }
+    ],
+    "require": {
+        "magento/magento2-base": "^2.0",
+        "phpunit/phpunit": "4.1.0 || ^5.4"
+    }
+}
