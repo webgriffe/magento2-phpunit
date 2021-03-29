@@ -11,6 +11,6 @@
     ],
     "require": {
         "magento/magento2-base": "^2.4",
-        "phpunit/phpunit": "^9.1"
+        "phpunit/phpunit": "9.1.*"
     }
 }
